@@ -543,7 +543,7 @@
                 
         // EMBEDDED ARCHITECTURE DATA
         const ARCHITECTURE_DATA = {
-  "timestamp": "2025-10-30T08:25:27.350Z",
+  "timestamp": "2025-10-30T08:58:24.260Z",
   "legacy": {
     "name": "Legacy System",
     "type": "monolithic",
@@ -3301,7 +3301,8 @@
           "exports": [
             "AutoblowController"
           ],
-          "functions": []
+          "functions": [],
+          "description": "Autoblow device integration"
         },
         {
           "path": "src/components/Character/LovenseController.js",
@@ -3312,7 +3313,164 @@
           "exports": [
             "LovenseController"
           ],
-          "functions": []
+          "functions": [],
+          "description": "Lovense toys (Lush, Nora, Max, etc.)"
+        },
+        {
+          "path": "src/components/Character/KiirooController.js",
+          "name": "KiirooController.js (Future)",
+          "lines": 0,
+          "type": "controller",
+          "imports": [],
+          "exports": [
+            "KiirooController"
+          ],
+          "functions": [],
+          "description": "Kiiroo/Keon device control"
+        },
+        {
+          "path": "src/components/Character/WeVibeController.js",
+          "name": "WeVibeController.js (Future)",
+          "lines": 0,
+          "type": "controller",
+          "imports": [],
+          "exports": [
+            "WeVibeController"
+          ],
+          "functions": [],
+          "description": "We-Vibe toy integration"
+        },
+        {
+          "path": "src/components/Character/EStimController.js",
+          "name": "EStimController.js (Future)",
+          "lines": 0,
+          "type": "controller",
+          "imports": [],
+          "exports": [
+            "EStimController"
+          ],
+          "functions": [],
+          "description": "E-stim/electro-stimulation devices"
+        },
+        {
+          "path": "src/components/Character/ShockCollarController.js",
+          "name": "ShockCollarController.js (Future)",
+          "lines": 0,
+          "type": "controller",
+          "imports": [],
+          "exports": [
+            "ShockCollarController"
+          ],
+          "functions": [],
+          "description": "Shock collars & training devices"
+        },
+        {
+          "path": "src/components/Character/ChastityController.js",
+          "name": "ChastityController.js (Future)",
+          "lines": 0,
+          "type": "controller",
+          "imports": [],
+          "exports": [
+            "ChastityController"
+          ],
+          "functions": [],
+          "description": "Smart chastity device locks (Qiui Cellmate, etc.)"
+        },
+        {
+          "path": "src/components/Character/RestraintController.js",
+          "name": "RestraintController.js (Future)",
+          "lines": 0,
+          "type": "controller",
+          "imports": [],
+          "exports": [
+            "RestraintController"
+          ],
+          "functions": [],
+          "description": "Smart bondage restraints & cuffs"
+        },
+        {
+          "path": "src/components/Character/VibrationController.js",
+          "name": "VibrationController.js (Future)",
+          "lines": 0,
+          "type": "controller",
+          "imports": [],
+          "exports": [
+            "VibrationController"
+          ],
+          "functions": [],
+          "description": "Generic vibrator/wand control"
+        },
+        {
+          "path": "src/components/Character/AnalPlugController.js",
+          "name": "AnalPlugController.js (Future)",
+          "lines": 0,
+          "type": "controller",
+          "imports": [],
+          "exports": [
+            "AnalPlugController"
+          ],
+          "functions": [],
+          "description": "Vibrating anal plugs & prostate massagers"
+        },
+        {
+          "path": "src/components/Character/LightsController.js",
+          "name": "LightsController.js (Future)",
+          "lines": 0,
+          "type": "controller",
+          "imports": [],
+          "exports": [
+            "LightsController"
+          ],
+          "functions": [],
+          "description": "Smart lights sync (Hue, LIFX)"
+        },
+        {
+          "path": "src/components/Character/MusicController.js",
+          "name": "MusicController.js (Future)",
+          "lines": 0,
+          "type": "controller",
+          "imports": [],
+          "exports": [
+            "MusicController"
+          ],
+          "functions": [],
+          "description": "Mood music & audio sync"
+        },
+        {
+          "path": "src/components/Character/TemperatureController.js",
+          "name": "TemperatureController.js (Future)",
+          "lines": 0,
+          "type": "controller",
+          "imports": [],
+          "exports": [
+            "TemperatureController"
+          ],
+          "functions": [],
+          "description": "Temperature play devices (heating/cooling)"
+        },
+        {
+          "path": "src/components/Character/EventSchedulerController.js",
+          "name": "EventSchedulerController.js (Future)",
+          "lines": 0,
+          "type": "controller",
+          "imports": [],
+          "exports": [
+            "EventSchedulerController"
+          ],
+          "functions": [],
+          "description": "Timed multi-device orchestration"
+        },
+        {
+          "path": "src/components/Character/ButtplugIOController.js",
+          "name": "ButtplugIOController.js (Future)",
+          "lines": 0,
+          "type": "controller",
+          "imports": [],
+          "exports": [
+            "ButtplugIOController"
+          ],
+          "functions": [],
+          "description": "Universal Buttplug.io protocol hub"
         }
       ],
       "utils": []
@@ -7241,7 +7399,7 @@
         "contexts": 5,
         "hooks": 11,
         "components": 23,
-        "controllers": 5
+        "controllers": 18
       }
     }
   }
@@ -7781,6 +7939,7 @@
                             <h4>${file.name}${futureTag}</h4>
                             <p><strong>Layer:</strong> ${layerName}</p>
                             ${file.lines > 0 ? `<p><strong>${file.lines.toLocaleString()} lines</strong></p>` : '<p style="color: #66ea76;"><strong>Future Extension Point</strong></p>'}
+                            ${file.description ? `<p class="detail">${file.description}</p>` : ''}
                             <p class="detail">Type: ${file.type}</p>
                             ${file.exports && file.exports.length > 0 ? `<p class="detail">Exports: ${file.exports.slice(0, 3).join(', ')}${file.exports.length > 3 ? '...' : ''}</p>` : ''}
                         `;
